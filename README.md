@@ -59,10 +59,6 @@ Please refer to detailed "User Guide.pdf" documentation provided in this repo.
 
 Please refer to detailed "User Guide.pdf" documentation provided in this repo.
 
-### DevNet Sandbox
-
-There is no Sandbox for this project.
-
 ## How to test the software
 
 ### Start ngrok tunnel
@@ -153,30 +149,15 @@ Run each one in a separate terminal.
   * You should then be greeted by splash page where you can follow through.
   * Once you submit your response, you will be redirected based on the interests you selected.
   * Either in your terminal or in Kibana (if you are running elastic) you will be able to see information captured from the captive portal.
-
-
+  
 ## Known issues
-
-
+* In the scenario where 1 person has multiple devices, the current version will count it as multiple clients
+* The current version cannot solve the random MAC address issue - device will be counted as different device if their MAC address changed
 
 ## Getting help
 
 Please refer to detailed "User Guide.pdf" documentation provided in this repo.
 
-
-## Getting involved
-
-We are more than happy to receive any feedback about the features and bugs to continue improving the code.
-
-(This section should detail why people should get involved and describe key areas you are currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building important pieces, etc. Include information on how to setup a development environment if different from general installation instructions.
-
-General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](./CONTRIBUTING.md) file.)
-
-## Credits and references
-
-1. Projects that inspired you
-2. Related projects
-3. Books, papers, talks, or other sources that have meaningful impact or influence on this code
 
 ----
 
