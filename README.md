@@ -157,7 +157,7 @@ Run each one in a separate terminal.
 ## Getting help
 
 Please refer to detailed "User Guide.pdf" documentation provided in this repo.
-
+Please refer to [Meraki Dashboard API](https://developer.cisco.com/meraki/api-v1/) for Meraki API information
 
 ----
 
