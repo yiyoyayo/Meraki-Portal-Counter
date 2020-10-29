@@ -1,12 +1,19 @@
-# csap-grape
+# Meraki-Portal-Counter
 
 This is a software project designed for a retail customer using Meraki. Project is designed to showcase Meraki API capabilities and is based on assumptions. Please refer to detailed "User Guide.pdf" documentation provided in this repo.
 
-### Purpose of the project
-* Use Meraki camera to count how many people are in the store.
-* Use Meraki AP scanning API to detect how many devices are present it the store.
-* Design Meraki AP Captive Portal to capture user interests and redirect them to promotion websites.
-* Display all this information so business owner so they can see how many users are in the store, how many devices are there in the store and how many people are logging to WiFi. They owner can use this information to see how can they encourage more customers to use caprive portal so they can capture their interest and send them related promotions.
+
+## Use Case Description
+
+The purpose of this project is to provide a solution for the retailer so they can get people traffic information easily. By using the analytical results, retailers have insights of the market trends and customer interests, which contribute in a targeted marketing campaign and successful business strategy.
+
+This project is not a fully working solution. This is more of a proof of concept to illustrates the capabilities of Meraki products and how they help achieve desired outcome of the case study.
+This project uses the following:
+* Meraki cameras to detect and count people entering and leaving the store
+* Meraki access points to detect and count devices in the store
+* Meraki Captive Portal to capture the customers’ information, and redirect them to products of interest.
+* Kibana to visualize the customer traffic and device information.
+* Backend code written in python.
 
 ## Software dependencies
 * Python 3
@@ -15,7 +22,8 @@ This is a software project designed for a retail customer using Meraki. Project 
 * ngrok
 * Meraki AP and Meraki Camera
 
-## Setup
+## Installation
+
 * You would need to install all software dependencies listed above
 * Setup ngrok
   * [Install ngrok](https://ngrok.com/download)
@@ -43,29 +51,19 @@ This is a software project designed for a retail customer using Meraki. Project 
   * SECRET
 
 
-## Structure
-  * __camera_count_v2.py__
-    * Used for capturing how many people enter and exit the frame as seen by Meraki camera.
-  * __location_scanning_v2.py__
-    * Used to detect nearby devices that use wifi.
-  * __meraki_captive_portal.py__
-    * Used to capture data from splash page and to host UI for splash page.
-  * __elastic_handler.py__
-    * Contains functions used by other scripts to query and push data to elasticsearch.
-  * __config.py__
-    * Contains all sensitive information that should not be shared publicly. Things like Meraki API keys, secret key, ngrok URLs, names for elasticsearch indices, etc...
-    * You would need to acquire most of this information from your Meraki dashboard or from your ngrok process.
-    * This file is part of __git ignore__ so any changes you make to it will not be pushed to main repo. We recommend you do not remove it from ignore file.
-  * __elastic_onetime.py__
-    * Contains code to create all indices required for this project. You would need to run this only once, when you setup elasticsearch.
-  * __ngrok.yml__
-    * Config file for ngrok. You should copy this to your ngrok/config folder (usially placed in ```$HOME/.ngrok/```) so you can run multiple tunnels at once.
-  * __requirements.txt__
-    * Contains all python moudles used by other scripts. To install these modules run ```pip3 install -r requirements.txt```. You would need to run this only once (i.e. when you are setting up project initially).
-  * __static__ and __templates__ directories
-    * Contain all front end files for Splash Page. Files like html, css, javascript, images, etc...
+## Configuration
 
-## Run Code
+Please refer to detailed "User Guide.pdf" documentation provided in this repo.
+
+## Usage
+
+Please refer to detailed "User Guide.pdf" documentation provided in this repo.
+
+### DevNet Sandbox
+
+There is no Sandbox for this project.
+
+## How to test the software
 
 ### Start ngrok tunnel
 Assuming you have copied *ngrok.yml* in previously mentioned directory, you can just run:
@@ -155,5 +153,112 @@ Run each one in a separate terminal.
   * You should then be greeted by splash page where you can follow through.
   * Once you submit your response, you will be redirected based on the interests you selected.
   * Either in your terminal or in Kibana (if you are running elastic) you will be able to see information captured from the captive portal.
-  
+
+
+## Known issues
+
+Document any significant shortcomings with the code. If using [GitHub Issues](https://help.github.com/en/articles/about-issues) to track issues, make that known and provide any templates or conventions to be followed when opening a new issue. 
+
+## Getting help
+
+Please refer to detailed "User Guide.pdf" documentation provided in this repo.
+
+
+## Getting involved
+
+If different from general installation instructions.This section should detail why people should get involved and describe key areas you are currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building important pieces, etc. Include information on how to setup a development environment if different from general installation instructions.
+
+General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](./CONTRIBUTING.md) file.
+
+## Credits and references
+
+1. Projects that inspired you
+2. Related projects
+3. Books, papers, talks, or other sources that have meaningful impact or influence on this code
+
+----
+
+## Licensing info
+
+                           CISCO SAMPLE CODE LICENSE
+                                  Version 1.1
+                Copyright (c) 2018 Cisco and/or its affiliates
+
+   These terms govern this Cisco Systems, Inc. ("Cisco"), example or demo
+   source code and its associated documentation (together, the "Sample
+   Code"). By downloading, copying, modifying, compiling, or redistributing
+   the Sample Code, you accept and agree to be bound by the following terms
+   and conditions (the "License"). If you are accepting the License on
+   behalf of an entity, you represent that you have the authority to do so
+   (either you or the entity, "you"). Sample Code is not supported by Cisco
+   TAC and is not tested for quality or performance. This is your only
+   license to the Sample Code and all rights not expressly granted are
+   reserved.
+
+   1. LICENSE GRANT: Subject to the terms and conditions of this License,
+      Cisco hereby grants to you a perpetual, worldwide, non-exclusive, non-
+      transferable, non-sublicensable, royalty-free license to copy and
+      modify the Sample Code in source code form, and compile and
+      redistribute the Sample Code in binary/object code or other executable
+      forms, in whole or in part, solely for use with Cisco products and
+      services. For interpreted languages like Java and Python, the
+      executable form of the software may include source code and
+      compilation is not required.
+
+   2. CONDITIONS: You shall not use the Sample Code independent of, or to
+      replicate or compete with, a Cisco product or service. Cisco products
+      and services are licensed under their own separate terms and you shall
+      not use the Sample Code in any way that violates or is inconsistent
+      with those terms (for more information, please visit:
+      www.cisco.com/go/terms).
+
+   3. OWNERSHIP: Cisco retains sole and exclusive ownership of the Sample
+      Code, including all intellectual property rights therein, except with
+      respect to any third-party material that may be used in or by the
+      Sample Code. Any such third-party material is licensed under its own
+      separate terms (such as an open source license) and all use must be in
+      full accordance with the applicable license. This License does not
+      grant you permission to use any trade names, trademarks, service
+      marks, or product names of Cisco. If you provide any feedback to Cisco
+      regarding the Sample Code, you agree that Cisco, its partners, and its
+      customers shall be free to use and incorporate such feedback into the
+      Sample Code, and Cisco products and services, for any purpose, and
+      without restriction, payment, or additional consideration of any kind.
+      If you initiate or participate in any litigation against Cisco, its
+      partners, or its customers (including cross-claims and counter-claims)
+      alleging that the Sample Code and/or its use infringe any patent,
+      copyright, or other intellectual property right, then all rights
+      granted to you under this License shall terminate immediately without
+      notice.
+
+   4. LIMITATION OF LIABILITY: CISCO SHALL HAVE NO LIABILITY IN CONNECTION
+      WITH OR RELATING TO THIS LICENSE OR USE OF THE SAMPLE CODE, FOR
+      DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO DIRECT, INCIDENTAL,
+      AND CONSEQUENTIAL DAMAGES, OR FOR ANY LOSS OF USE, DATA, INFORMATION,
+      PROFITS, BUSINESS, OR GOODWILL, HOWEVER CAUSED, EVEN IF ADVISED OF THE
+      POSSIBILITY OF SUCH DAMAGES.
+
+   5. DISCLAIMER OF WARRANTY: SAMPLE CODE IS INTENDED FOR EXAMPLE PURPOSES
+      ONLY AND IS PROVIDED BY CISCO "AS IS" WITH ALL FAULTS AND WITHOUT
+      WARRANTY OR SUPPORT OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY
+      LAW, ALL EXPRESS AND IMPLIED CONDITIONS, REPRESENTATIONS, AND
+      WARRANTIES INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTY OR
+      CONDITION OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-
+      INFRINGEMENT, SATISFACTORY QUALITY, NON-INTERFERENCE, AND ACCURACY,
+      ARE HEREBY EXCLUDED AND EXPRESSLY DISCLAIMED BY CISCO. CISCO DOES NOT
+      WARRANT THAT THE SAMPLE CODE IS SUITABLE FOR PRODUCTION OR COMMERCIAL
+      USE, WILL OPERATE PROPERLY, IS ACCURATE OR COMPLETE, OR IS WITHOUT
+      ERROR OR DEFECT.
+
+   6. GENERAL: This License shall be governed by and interpreted in
+      accordance with the laws of the State of California, excluding its
+      conflict of laws provisions. You agree to comply with all applicable
+      United States export laws, rules, and regulations. If any provision of
+      this License is judged illegal, invalid, or otherwise unenforceable,
+      that provision shall be severed and the rest of the License shall
+      remain in full force and effect. No failure by Cisco to enforce any of
+      its rights related to the Sample Code or to a breach of this License
+      in a particular situation will act as a waiver of such rights. In the
+      event of any inconsistencies with any other terms, this License shall
+      take precedence.
 
