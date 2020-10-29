@@ -157,7 +157,7 @@ Run each one in a separate terminal.
 
 ## Known issues
 
-Document any significant shortcomings with the code. If using [GitHub Issues](https://help.github.com/en/articles/about-issues) to track issues, make that known and provide any templates or conventions to be followed when opening a new issue. 
+
 
 ## Getting help
 
@@ -166,9 +166,11 @@ Please refer to detailed "User Guide.pdf" documentation provided in this repo.
 
 ## Getting involved
 
-If different from general installation instructions.This section should detail why people should get involved and describe key areas you are currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building important pieces, etc. Include information on how to setup a development environment if different from general installation instructions.
+We are more than happy to receive any feedback about the features and bugs to continue improving the code.
 
-General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](./CONTRIBUTING.md) file.
+(This section should detail why people should get involved and describe key areas you are currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building important pieces, etc. Include information on how to setup a development environment if different from general installation instructions.
+
+General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](./CONTRIBUTING.md) file.)
 
 ## Credits and references
 
