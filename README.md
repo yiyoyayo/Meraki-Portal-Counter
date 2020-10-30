@@ -81,7 +81,7 @@ For example, to run tunnel for elasticsearch only, you would do:
 Assuming you have not changed default port elastic is running on (i.e. 9200).
 
 Here is a sample output of ngrok tunnel:
-
+![ngrok tunnels](images/ngrok.png)
 
 #### Why do we need ngrok?
 
@@ -142,7 +142,16 @@ Run each one in a separate terminal.
   * You should be all up and running now.
   * You can test by using camera and AP (i.e. walk into the frame or camera, and/or connect to wifi)
   * Then you can go to ngrok URL that is pointing to Kibana (i.e. localhost:5601) and you will see all of the collected data.
-  * Refer to "User Guide.pdf" documentation provided in this repo for more information on how to use Kibana to display your information. Alternatively, you can see demo video.
+  * Refer to "User Guide.pdf" documentation provided in this repo for more information on how to use Kibana to display your information. Alternatively, you can see demo video. Here are some sample outputs from the above scripts:
+    * camera_count_v2.py: 
+    ![Camera Count](images/IMG_0277.png)
+    * location_scanning_v2.py:
+    ![connecttokibana](images/IMG_0272(1).jpeg)
+    ![location](images/IMG_0273.jpeg)
+    * meraki_captive_portal.py: sample captive portal
+    ![captive](images/IMG_0279.png)
+    * Kibana database received data from the above scripts:
+    ![kibana](images/IMG_0270.jpeg)
 
 ### Authors Note
 * We did not really had much time to create unit test (sorry...) but you can kinda test some scripts without needing Meraki AP.
