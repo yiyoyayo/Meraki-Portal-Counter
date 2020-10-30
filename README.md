@@ -15,8 +15,8 @@ This project uses the following:
 * Kibana to visualize the customer traffic and device information.
 * Backend code written in python.
 
-## High level desgin diagram
-![High level desgin diagram](High-Level-Diagram.png)
+## High level design diagram
+![High level design diagram](images/HighLevelDiagram.png)
 
 
 ## Software dependencies
@@ -79,6 +79,9 @@ For example, to run tunnel for elasticsearch only, you would do:
   ngrok http 9200
   ```
 Assuming you have not changed default port elastic is running on (i.e. 9200).
+
+Here is a sample output of ngrok tunnel:
+
 
 #### Why do we need ngrok?
 
