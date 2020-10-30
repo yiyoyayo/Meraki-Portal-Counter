@@ -15,6 +15,10 @@ This project uses the following:
 * Kibana to visualize the customer traffic and device information.
 * Backend code written in python.
 
+## High level desgin diagram
+![High level desgin diagram](/images/High Level Diagram.png)
+
+
 ## Software dependencies
 * Python 3
 * Elasticsearch
