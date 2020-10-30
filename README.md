@@ -16,7 +16,7 @@ This project uses the following:
 * Backend code written in python.
 
 ## High level desgin diagram
-![High level desgin diagram](/High Level Diagram.png)
+![High level desgin diagram](High Level Diagram.png)
 
 
 ## Software dependencies
